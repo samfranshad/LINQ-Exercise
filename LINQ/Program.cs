@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var crochetStitches = new List<string>() { "single", "half double", "double", "slip", "increase", "decrease" };
+
+            var orderedStitches = crochetStitches.OrderBy(stitch => stitch.Length);
+
+            foreach (var stitch in orderedStitches)
+            {
+                Console.WriteLine(stitch);
+            }
         }
     }
 }
